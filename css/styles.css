@@ -1,0 +1,217 @@
+body {
+    background-color: #000;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+#navbar {
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* --- CONTENEDOR DE RESERVAS (DOS COLUMNAS) --- */
+.contenedor-reserva {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #000;
+    padding: 20px;
+}
+
+/* Columna Izquierda: Selección e Info */
+.columna-izquierda {
+    flex: 0 0 300px; /* Ancho fijo para que no se estire */
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#combo-peliculas {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+#info-pelicula-reserva {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* --- SALA DE CINE (DERECHA) --- */
+.sala-cine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pantalla {
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 15px #fff;
+    margin-bottom: 50px;
+}
+
+/* --- GRILLA DE ASIENTOS --- */
+.grilla-contenedor {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    gap: 5px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.asiento {
+    width: 20px;
+    height: 20px;
+    background-color: #444;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.asiento:hover {
+    background-color: #666;
+}
+
+.asiento.seleccionado {
+    background-color: #28a745;
+}
+
+.pasillo {
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+}
+
+.pantalla {
+    width: 100%;
+    max-width: 600px;
+    height: 17px;
+    background: #fff;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+}
+
+/* --- FOOTER --- */
+#footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+/* --- ESTILOS INDEX (CARTELERA) --- */
+#cartelera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pelicula-card {
+    width: 200px;
+    text-align: center;
+}
+
+.pelicula-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* --- MODAL (INDEX) --- */
+.modal-oculto {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+    background-color: #1a1a1a;
+    margin: 10% auto;
+    padding: 30px;
+    width: 50%;
+    border-radius: 10px;
+    position: relative;
+}
+
+#cerrar-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+#fecha-reserva {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+#btn-aceptar-final {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.asiento.ocupado {
+    background-color: #ff4444; /* Rojo para ocupados */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+.footer-content p {
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre texto y logo */
+}
+
+.tmdb-logo-inline {
+    height: 0.8rem; /* Igual al font-size del párrafo */
+    width: auto;
+    vertical-align: middle;
+}

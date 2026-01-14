@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Practica de reserva de asientos para sala de cine">
+        <meta name="keywords" content="reservas,contacto">
+        <meta name="author" content="Gis">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+  
+        <header class="header" id="header">
+            <nav id="navbar">
+            <ul>
+                <li><a href="../index.html" id="home">Inicio</a></li>
+                <li><a href="../pages/reservas.html" id="reservar">Reservar asiento</a></li>
+                <li><a href="../pages/contacto.html" id="contacto">Contacto</a></li>
+            </ul>
+            </nav>
+        </header>
+
+        <h1>RESERVAS</h1>
+
+    <main class="contenedor-reserva">
+        <aside class="columna-izquierda">
+            <section id="movieDetails">
+                <label for="combo-peliculas">Película:</label>
+                <select id="combo-peliculas">
+                    <option value="">Seleccione película</option>
+                </select>
+                <div id="info-pelicula-reserva"></div>
+            </section>
+
+            <div class="campo-reserva">
+            <label for="fecha-reserva">Fecha:</label>
+            <input type="date" id="fecha-reserva" required>
+           </div>
+
+           <div id="modal-reserva" class="modal-oculto">
+                <div class="modal-contenido">
+                    <span id="cerrar-modal-reserva" style="float:right; cursor:pointer;">&times;</span>
+                    <h2>Reserva Confirmada</h2>
+                    <div id="detalle-final"></div>
+                    <button id="btn-aceptar-final">Aceptar</button>
+                </div>
+            </div>
+
+            <div id="modal-confirmacion" class="modal-oculto">
+                <div class="modal-contenido">
+                    <span id="cerrar-modal-reserva">&times;</span>
+                    <h2>Reserva Confirmada</h2>
+                    <div id="detalle-reserva"></div>
+                    <button id="aceptar-reserva">Aceptar</button>
+                </div>
+            </div>
+
+            <section id="detalleCompra">
+                <h3>Resumen</h3>
+                <p>Asientos: <span id="contador-asientos">0</span></p>
+                <p>Total: $<span id="total-precio">0</span></p>
+                <button id="btn-comprar">Confirmar</button>
+            </section>
+        </aside>
+
+        <section id="seatsAvailable" class="sala-cine">
+            <div class="pantalla">PANTALLA</div>
+            <div id="grilla-asientos" class="grilla-contenedor"></div>
+        </section>
+    </main>
+
+    <script src="../js/javascript.js"></script>
+
+            <footer id="footer">
+            <div class="footer-content">
+                <p>
+                    Este producto utiliza la API de TMDB pero no está avalado ni certificado por TMDB.
+                    <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" 
+                        alt="TMDB Logo" 
+                        class="tmdb-logo-inline">
+                </p>
+            </div>
+        </footer>
+
+    </body>
+
+
+
+</html>
